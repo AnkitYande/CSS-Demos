@@ -1,0 +1,48 @@
+paths = [
+    `<circle class="cls-1" cx="1337.33" cy="719.48" r="106.81" />`,
+    `<circle class="cls-1" cx="670.73" cy="1059.84" r="149.1" />`,
+    `<circle class="cls-1" cx="1058.03" cy="310.36" r="149.1" />`,
+    `<circle class="cls-1" cx="1131.57" cy="825.45" r="74.49" />`,
+    `<circle class="cls-1" cx="1509.28" cy="238.71" r="102.54" />`,
+    `<circle class="cls-1" cx="396.82" cy="477.35" r="81.17" />`,
+    `<circle class="cls-1" cx="134.37" cy="737.43" r="81.17" />`,
+    `<circle class="cls-1" cx="520.68" cy="125.85" r="69.21" />`,
+    `<circle class="cls-1" cx="1451.4" cy="1012.99" r="79.04" />`,
+    `<circle class="cls-1" cx="1697.9" cy="504.73" r="60.67" />`,
+    `<circle class="cls-1" cx="1057.89" cy="482.66" r="107.51" />`,
+    `<circle class="cls-1" cx="1057.45" cy="1106.95" r="37.32" />`,
+    `<circle class="cls-1" cx="1202.33" cy="1092.46" r="128.17" />`,
+    `<circle class="cls-1" cx="875.37" cy="687.84" r="74.77" />`,
+    `<circle class="cls-1" cx="917.36" cy="482.33" r="81.6" />`,
+    `<circle class="cls-1" cx="1257.77" cy="482.62" r="56.39" />`,
+    `<circle class="cls-1" cx="1716.53" cy="736.79" r="52.98" />`,
+    `<circle class="cls-1" cx="1202.33" cy="125.63" r="55.54" />`,
+    `<circle class="cls-1" cx="265.87" cy="1055.14" r="74.34" />`,
+    `<circle class="cls-1" cx="1658.97" cy="906.04" r="23.92" />`,
+    `<circle class="cls-1" cx="177" cy="216.21" r="124.04" />`,
+    `<circle class="cls-1" cx="904.68" cy="49.99" r="49.7" />`,
+    `<circle class="cls-1" cx="649.06" cy="495.19" r="63.66" />`,
+    `<circle class="cls-1" cx="880.88" cy="299.37" r="149.1" />`,
+    `<circle class="cls-1" cx="1735.76" cy="91.59" r="86.5" />`,
+    `<circle class="cls-1" cx="933.32" cy="1001.44" r="37.32" />`,
+    `<circle class="cls-1" cx="838.32" cy="868.44" r="34.32" />`,
+]
+
+var i = 1;
+function myLoop() {
+    clipPath = document.getElementById("myClip");
+    console.log(clipPath)
+    setTimeout(function () {
+        clipPath.insertAdjacentHTML("beforeend", paths[i])
+        i++;
+        if (i < paths.length) {
+            myLoop();
+        }
+    }, 100)
+}
+
+window.onload = () => {
+    myLoop()
+    clipPath = document.getElementById("myClip");
+    console.log(clipPath.innerHtml)
+}
