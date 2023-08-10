@@ -1,4 +1,6 @@
-body{
+/* Basic Styling */
+
+body {
     font-family: 'Tinos', sans-serif;
     margin-top: 2em;
     margin-bottom: 2em;
@@ -28,38 +30,30 @@ button:hover {
     gap: 50px;
 }
 
-.card {
-    width: 25%;
-    height: 500px;
-    box-shadow:0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-}
-
 img {
     width: 100%;
+    max-width: 350px;
     height: 500px;
     object-fit: cover;
     backface-visibility: hidden;
 }
 
 
-.cover {
-    background-color: white;
-    z-index: 10;
-    width: 100%;
+/* Styling Cards */
+
+.card {
+    width: 25%;
+    max-width: 350px;
     height: 500px;
-    transition: all 0.75s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: transparent;
 }
 
-.flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
+#card1, #card3 {
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+#card2 {
     perspective: 1000px;
 }
 
@@ -68,10 +62,36 @@ img {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.75s;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
     transform-style: preserve-3d;
+    transition: transform 0.75s;
 }
 
+.inner * {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+/* Card Covers */
+.cover {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    background-color: white;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.75s ease-in-out;
+}
+
+
+/* Card 1 - slide from top */
 .cover1 {
     position: relative;
     top: -200%;
@@ -82,6 +102,7 @@ img {
 }
 
 
+/* Card 2 - Flip 180 */
 .cover2 {
     position: relative;
     width: 100%;
@@ -94,13 +115,8 @@ img {
     transform: rotateY(180deg);
 }
 
-.inner * {
-    /* position: absolute; */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
 
-
+/* Card 3 - slide from right */
 .cover3 {
     position: relative;
     right: -200%;
