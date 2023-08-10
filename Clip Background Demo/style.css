@@ -14,14 +14,14 @@ svg {
 
 .quote-container {
     position: absolute;
-    top: 65%;
-    right: 22%
+    top: 32vw;
+    right: 22vw
 }
 
 .name-container {
     position: absolute;
-    top: 65%;
-    left: 22%
+    top: 32vw;
+    left: 23vw
 }
 
 a {
