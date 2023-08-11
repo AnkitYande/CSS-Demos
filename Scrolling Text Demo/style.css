@@ -1,0 +1,93 @@
+body {
+    background-color: #3A4638;
+    font-family: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+    color: #e7beaf
+}
+
+a {
+    color: #e7beaf
+}
+
+p {
+    font-size: 1.1em
+}
+
+.selectedImg {
+    position: absolute;
+    width: 12vw;
+    z-index: -1;
+    transition: all 0.75s ease-in-out;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+}
+
+.item img {
+    display: none;
+}
+
+h1 {
+    transform: scale(1.2, 2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 4vw;
+    color: transparent;
+    -webkit-text-stroke: 0.0000001em #e7beaf;
+}
+
+h1:hover {
+    -webkit-text-stroke: 0;
+    color: white;
+}
+
+.rail {
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    width: 100vw;
+}
+
+.track {
+    display: flex;
+    justify-content: space-around;
+    flex-shrink: 0;
+    width: 200vw;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.t1 {
+    animation: scrollLeft 45s linear infinite;
+    rotate: -0.59deg;
+}
+
+.t2 {
+    animation: scrollRight 45s linear infinite;
+    rotate: 0.69deg;
+}
+
+.t3 {
+    animation: scrollLeft 45s linear infinite;
+    rotate: 1.51deg;
+}
+
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(0vw);
+    }
+}
