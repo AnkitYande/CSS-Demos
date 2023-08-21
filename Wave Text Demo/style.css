@@ -1,0 +1,76 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    font-family: "Bodoni Moda", sans-serif;
+    margin: 25px;
+}
+
+a:visited {
+    color: white;
+}
+
+svg {
+    position: absolute;
+}
+
+.svg1 {
+    top: -120px
+}
+
+.svg2 {
+    top: 0px
+}
+
+.svg3 {
+    top: 120px
+}
+
+path {
+    transition: all 0.05s ease-in-out;
+}
+
+text, textPath {
+    font-size: 6.5vw;
+    fill: white;
+    outline: none;
+    user-select: none;
+    letter-spacing: 2px;
+}
+
+button {
+    border: none;
+    outline: 2px solid white;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 10000px;
+    background-color: transparent;
+    color: white;
+    font-size: 26px;
+    font-family: sans-serif;
+    font-weight: 200;
+    position: absolute;
+    bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 250px;
+    transition: all 0.25s ease-in-out;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+}
+
+p {
+    position: absolute;
+    z-index: 2;
+}
