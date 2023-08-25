@@ -1,0 +1,45 @@
+body {
+    color: white;
+    font-weight: 200;
+    background-color: #010d09;
+    font-family: 'Cormorant Garamond', serif;
+    background-image: url(https://images.unsplash.com/photo-1511207538754-e8555f2bc187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGdyZWVuJTIwZ3JhZGllbnQlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww&auto=format&fit=crop&w=700&q=60);
+    margin: 0;
+}
+
+p {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+a {
+    color: #fff;
+}
+
+a:visited {
+    color: #fff;
+}
+
+
+.filter {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px
+}
+
+.container {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+.text {
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 300;
+}
+
+.text * {
+    opacity: 0.25;
+    transition: 0.25s ease
+}
