@@ -44,7 +44,7 @@ body {
     width: 25vw;
     height: 35vh;
     max-height: 30vw;
-    background-color: red;
+    background-color: rgb(87, 65, 39);
     margin: 2px;
     z-index: 3;
 }
@@ -71,6 +71,7 @@ img:hover {
 
 .grid {
     width: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: 1fr 0.35fr 0.6fr 0.35fr 0.6fr 0.35fr 0.6fr 0.35fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -78,7 +79,7 @@ img:hover {
     column-gap: 4rem;
 }
 
-.footer{
+.footer {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -145,4 +146,89 @@ img:hover {
 .image-container:nth-of-type(11) {
     grid-column: 3/3;
     grid-row: 4/7;
+}
+
+
+@media (max-width: 480px) {
+    
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr .85fr .4fr .6fr .4fr .85fr .4fr .6fr .4fr .85fr .4fr .6fr .4fr .85fr .4fr .6fr 1fr;
+        column-gap: 2em;
+    }
+
+    .wrapper{
+        height: 150%;
+        height: 200%;
+        padding: 2em 2em;
+    }
+
+    .selection {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .image-container {
+        width: 70vw;
+        height: 40vh;
+        max-height: none;
+    }
+
+    .image-container:nth-of-type(1) {
+        grid-column: 3/3;
+        grid-row: 14/14;
+    }
+
+    .image-container:nth-of-type(2) {
+        grid-column: 1/1;
+        grid-row: 14/18;
+    }
+
+    .image-container:nth-of-type(3) {
+        grid-column: 2/2;
+        grid-row: 12/15;
+    }
+
+    .image-container:nth-of-type(4) {
+        grid-column: 2/2;
+        grid-row: 4/7;
+    }
+
+    .image-container:nth-of-type(5) {
+        grid-column: 3/3;
+        grid-row: 2/5;
+    }
+
+    .image-container:nth-of-type(6) {
+        grid-column: 1/1;
+        grid-row: 2/5;
+    }
+
+    .image-container:nth-of-type(10) {
+        grid-column: 1/1;
+        grid-row: 6/9;
+    }
+
+    .image-container:nth-of-type(9) {
+        grid-column: 1/1;
+        grid-row: 10/13;
+    }
+
+    .image-container:nth-of-type(8) {
+        grid-column: 3/3;
+        grid-row: 6/9;
+    }
+
+    .image-container:nth-of-type(7) {
+        grid-column: 3/3;
+        grid-row: 10/13;
+    }
+
+    .image-container:nth-of-type(11) {
+        grid-column: 2/2;
+        grid-row: 8/11;
+    }
 }
