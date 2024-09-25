@@ -1,0 +1,142 @@
+$row-hover-delay: 20ms;
+@mixin apply-transition-delay($total-children) {
+  @for $i from 1 through $total-children {
+    &:nth-child(#{$i}) {
+      transition-delay: ($i - 1) * $row-hover-delay;
+    }
+  }
+}
+
+.white-letter {
+    color: white;
+    transform-origin: 50% 15%;
+}
+.red-letter {
+    color: #eedb00;
+    transform-origin: 50% 85%;
+}
+
+.container {
+  .white-letter {
+    z-index: 1; // Ensure it’s above the red letter
+    transform: scaleY(1);
+  }
+
+  .red-letter {
+    z-index: 0; // Ensure it’s behind the white letter
+    transform: scaleY(0);
+  }
+
+  &:hover {
+    .white-letter {
+      transform: scaleY(0); // Shrinks the white letter upwards
+    }
+    .red-letter {
+      transform: scaleY(1); // Grows the red letter from the bottom
+    }
+  }
+}
+
+// General Styling
+html,
+body {
+  height: 100%;
+  margin: 0;
+//   overflow: hidden; /* Prevents scrollbars if the image causes overflow */
+}
+
+body {
+  padding: 1rem;
+  color: white;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  background-image: url("https://lh3.googleusercontent.com/pw/AP1GczMvCQmplsaUq9M9bEqhl86GUBaAUNzEPU5LuEIHjZDsOveO4af5OB9FOph7S3IYhYERLPlqG5NVKg_ekFVA_r67p0nKmMtArhzTKMo_k32Xc2tShVLRVsBJ9i56FnUkgpWyxTy7dofkbSMXvBasn0fmLA=w2000-h1000-s-no-gm?authuser=0");
+  transition: background-image 0.5s ease;
+}
+
+a {
+  color: white;
+}
+a:hover {
+  color: #eedb00;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.styled-text {
+  font-family: Impact, Arial, sans-serif;
+  display: flex;
+  font-size: clamp(36px, 3.5vw, 90px);
+}
+
+.white-letter,
+.red-letter {
+  transition: transform 300ms;
+  @include apply-transition-delay(15);
+}
+
+.white-container,
+.red-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text-container {
+  position: relative;
+  display: block;
+}
+
+.text-wrapper {
+  margin-left: 65vw;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(36px, 3.7vw, 90px);
+}
+
+.footer-content {
+  position: relative;
+}
+
+/* Set the opacity to 1 on hover */
+.text-container:hover {
+  opacity: 1;
+}
+
+/* Reduce opacity for all other siblings when one is hovered */
+.text-wrapper:hover .text-container {
+  opacity: 0.5;
+}
+
+.text-wrapper:hover .text-container:hover {
+  opacity: 1;
+}
+
+// .footer {
+//   .styled-text {
+//     font-size: clamp(24px, 20vw, 10000px) !important;
+//   }
+//   position: absolute;
+//   z-index: -1;
+//   bottom: clamp(24px, 20vw, 1000px);
+//   left: 0;
+//   width: 100%;
+//   text-align: center; /* Centers text inside the footer */
+//   padding: 10px 0; /* Padding for spacing inside the footer */
+  
+// }
+
+// /* Change the footer-container's style when hovering over any text-container */
+// .text-wrapper:hover + .footer {
+//   color: red !important;
+// }
