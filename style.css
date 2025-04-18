@@ -7,7 +7,7 @@ body {
     font-family: 'poppins', sans-serif;
     padding: 3em;
     background-color: #fff;
-    color: #444;
+    color: #333;
 }
 
 
@@ -36,4 +36,47 @@ a {
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+
+.hero {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.hero h2 {
+    text-align: center;
+    font-size: 1.35rem;
+    color: #666;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+p {
+    text-align: left;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    body{
+        padding: 0.7em
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero h2 {
+        font-size: 1.25rem;
+    }
+    .hero p {
+        font-size: 0.85rem;
+    }
 }
